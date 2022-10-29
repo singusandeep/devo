@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: sandeep-deploy
+
+  labels:
+
+    app: websandeep
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+    matchLabels:
+
+      app: websandeep
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: websandeep
+
+    spec:
+
+      terminationGracePeriodSeconds: 1
+
+      containers:
+
+      - name: hello-sandeep
+
+        image: sandeeo1607/sandeep
+
+        imagePullPolicy: Always
+
+        ports:
+
+        - containerPort: 8081\
