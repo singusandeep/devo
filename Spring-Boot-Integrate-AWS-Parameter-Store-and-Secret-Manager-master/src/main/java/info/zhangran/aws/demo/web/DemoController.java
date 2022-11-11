@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
  
-  @Value("${exploreparamstore.device.token}")
-  private String deviceToken;
- 
   @Value("${test1}")
   private String secretManagerTest1;
 
@@ -30,7 +27,7 @@ public class DemoController {
   @GetMapping("/parameter")
   public ResponseEntity<String> getParam() {
   
-    log.info("Parameter Store Device Token {}", deviceToken);
+    
     log.info("Secret Manager test1's value {}", secretManagerTest1);
     log.info("Secret Manager test2's value {}", secretManagerTest2);
     log.info("Secret Manager test3's value {}", secretManagerTest3);
