@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
  
-
+  @Value("${exploreparamstore.device.token}")
+  private String deviceToken;
+ 
   @Value("${test1}")
   private String secretManagerTest1;
 
