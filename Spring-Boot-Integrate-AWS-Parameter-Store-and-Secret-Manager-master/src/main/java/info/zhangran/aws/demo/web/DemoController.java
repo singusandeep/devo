@@ -15,23 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
  
-  @Value("${test1}")
-  private String secretManagerTest1;
-
-  @Value("${test2}")
-  private String secretManagerTest2;
-
-  @Value("${test3}")
-  private String secretManagerTest3;
+  
 
   @GetMapping("/parameter")
-  public ResponseEntity<String> getParam() {
-  
-    
-    log.info("Secret Manager test1's value {}", secretManagerTest1);
-    log.info("Secret Manager test2's value {}", secretManagerTest2);
-    log.info("Secret Manager test3's value {}", secretManagerTest3);
-    return ResponseEntity.ok("hello");
+  public ResponseEntity<String> getParam() {  
+    return ResponseEntity.ok("value : value1");
   }
 
 }
